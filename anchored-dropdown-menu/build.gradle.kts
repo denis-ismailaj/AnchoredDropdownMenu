@@ -15,7 +15,7 @@ publishing {
 }
 
 android {
-    namespace = "androidx.compose.material3"
+    namespace = "com.denisismailaj.AnchoredDropdownMenu"
     compileSdk = 34
 
     defaultConfig {

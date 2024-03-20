@@ -24,6 +24,11 @@ import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupPositionProvider
 import androidx.compose.ui.window.PopupProperties
 
+import com.denisismailaj.anchoreddropdownmenu.DropdownMenuContent
+import com.denisismailaj.anchoreddropdownmenu.MenuVerticalMargin
+import com.denisismailaj.anchoreddropdownmenu.calculateTransformOrigin
+import com.denisismailaj.anchoreddropdownmenu.MenuPosition
+
 enum class DropdownMenuAnchor {
     Auto,
     TopToAnchorBottom,
@@ -52,7 +57,7 @@ fun AnchoredDropdownMenu(
         val transformOriginState = remember { mutableStateOf(TransformOrigin.Center) }
         val density = LocalDensity.current
         val popupPositionProvider = remember(offset, density) {
-            DropdownMenuPositionProvider(
+            AnchoredDropdownMenuPositionProvider(
                 offset,
                 density,
                 anchor,
@@ -78,7 +83,7 @@ fun AnchoredDropdownMenu(
 }
 
 @Immutable
-internal data class DropdownMenuPositionProvider(
+internal data class AnchoredDropdownMenuPositionProvider(
     val contentOffset: DpOffset,
     val density: Density,
     val anchor: DropdownMenuAnchor,

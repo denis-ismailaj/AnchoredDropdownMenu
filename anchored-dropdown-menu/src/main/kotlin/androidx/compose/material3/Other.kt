@@ -1,6 +1,8 @@
-@file:Suppress("TransitionPropertiesLabel", "KotlinRedundantDiagnosticSuppress")
+@file:Suppress(
+    "TransitionPropertiesLabel", "KotlinRedundantDiagnosticSuppress", "PackageDirectoryMismatch"
+)
 
-package androidx.compose.material3
+package com.denisismailaj.anchoreddropdownmenu
 
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.MutableTransitionState
@@ -17,6 +19,10 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerBasedShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.ColorScheme
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Shapes
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.MutableState
