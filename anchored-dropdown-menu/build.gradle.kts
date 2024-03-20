@@ -1,6 +1,17 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    id("maven-publish")
+}
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }
 
 android {
