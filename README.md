@@ -21,7 +21,7 @@
 
         dependencies {
             ...
-            implementation("com.github.denis-ismailaj:AnchoredDropdownMenu:0.1.0")
+            implementation("com.github.denis-ismailaj:AnchoredDropdownMenu:1.0.0")
         }
 
 ## Usage
